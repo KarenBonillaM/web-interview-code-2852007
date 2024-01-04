@@ -12,12 +12,10 @@
     myElement.style = 'background-color: ' + colors[currColor];
     myNode.appendChild(myElement);
 
-    if (currColor === colorAmt-1) {
-      currColor = 0;
-    } else {
-      currColor++;
-    }
+    currColor === colorAmt - 1 ? currColor = 0 : currColor++;
   }
+
+  
 
   myNode.addEventListener('click', function(e) {
     e.target.parentNode.removeChild(e.target);
